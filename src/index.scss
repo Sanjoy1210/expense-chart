@@ -1,4 +1,94 @@
-.hello {
-  background-color: red;
-  color: #fff;
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue");
+
+// variables
+$primary-color: #430099;
+$light-green: #4fd18b;
+$light-blue: #4c49ed;
+$dark-blue: #141197;
+$soft-blue: #9d9bf4;
+$blue: #003eff;
+$black: #1f1f23;
+$dark-gray: #373b47;
+$white: #fff;
+$light-gray: #f5f6fa;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html,
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+// ================== home page style start ==================
+.section__container {
+  max-width: 560px;
+  margin: auto;
+  background-color: $primary-color;
+
+  .title {
+    color: #fff;
+    text-align: center;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 34px;
+  }
+
+  .chart__container {
+    max-height: 545px;
+    background-color: #fff;
+    padding: 32px 0;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    flex-shrink: 0;
+
+    .chart__title {
+      font-size: 24px;
+      color: $black;
+      font-weight: 700;
+    }
+
+    .tabs {
+      display: flex;
+      padding: 12px 32px;
+      align-items: center;
+      gap: 12px;
+      border-radius: 30px;
+      background-color: $light-gray;
+
+      .tab__label {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.84px;
+        text-transform: uppercase;
+        color: $dark-gray;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 16px;
+
+        &:hover {
+          background-color: $white;
+        }
+      }
+
+      .active__tab__label {
+        background-color: $white;
+        color: $blue;
+      }
+    }
+  }
+}
+// ================== home page style end ==================

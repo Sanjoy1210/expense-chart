@@ -1,7 +1,14 @@
+import Tabs from "./Tabs";
+
 export default function HomePage() {
   return (
-    <div>
-      <h1>Welcome to Home Page</h1>
-    </div>
+    <section className="section__container">
+      <h1 className="title">Expense Chart</h1>
+      <div className="chart__container">
+        <h3 className="chart__title">Expenses</h3>
+        {/* tabs */}
+        <Tabs />
+      </div>
+    </section>
   );
 }
