@@ -57,4 +57,4 @@ Your app should be available in http://localhost:5173/
 
 ## Project live preview
 
-- [expense chart app]()
+- [expense chart app](https://expense-chart-web.netlify.app/)
