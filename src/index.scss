@@ -67,7 +67,7 @@ body {
       display: flex;
       padding: 12px 32px;
       align-items: center;
-      gap: 12px;
+      gap: 21px;
       border-radius: 30px;
       background-color: $light-gray;
 
@@ -108,6 +108,18 @@ body {
         display: flex;
         gap: 10px;
         align-items: center;
+      }
+    }
+
+    .donut__chart {
+      text {
+        font-weight: 700;
+      }
+      .total__value {
+        font-size: 10px;
+      }
+      .decimal__value {
+        font-size: 5px;
       }
     }
 

@@ -25,7 +25,7 @@ export default function HomePage() {
             />
 
             {/* doughnut chart */}
-            <DonutChart data={[selectedPeriod]} />
+            <DonutChart data={selectedPeriod} />
           </div>
         </div>
 
