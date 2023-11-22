@@ -1,4 +1,28 @@
-@import url("https://fonts.cdnfonts.com/css/helvetica-neue");
+// @import url("https://fonts.cdnfonts.com/css/helvetica-neue");
+// @import "./fonts/HelveticaNeue/HelveticaNeue-Bold.ttf";
+// @import "./fonts/HelveticaNeue/HelveticaNeue-Medium.otf";
+// @import "./fonts/HelveticaNeue/HelveticaNeue-Regular.otf";
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: local("HelveticaNeue"),
+    url("./fonts/HelveticaNeue/HelveticaNeue-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: local("HelveticaNeue"),
+    url("./fonts/HelveticaNeue/HelveticaNeue-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: local("HelveticaNeue"),
+    url("./fonts/HelveticaNeue/HelveticaNeue-Regular.otf") format("opentype");
+  font-weight: 400;
+}
 
 // variables --> colors
 $primary-color: #430099;
@@ -30,7 +54,7 @@ $xxxl: 1920px;
 
 html,
 body {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "HelveticaNeue", sans-serif;
   font-size: 16px;
   font-weight: 400;
   background-color: $primary-color;
@@ -38,19 +62,19 @@ body {
 
 // ================== home page style start ==================
 .section__container {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
-  max-width: 560px;
-  padding: 10px;
+  max-width: 400px;
+  padding: 30px 10px;
 
   .title {
     color: #fff;
     text-align: center;
-    font-size: 42px;
+    font-size: 36px; // 42px
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -60,7 +84,7 @@ body {
   .chart__container {
     width: 100%;
     background-color: $white;
-    padding: 32px;
+    padding: 28px; // 32px
     border-radius: 40px;
 
     .chart__title {
@@ -73,7 +97,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 42px;
+      gap: 30px; // 42px
       flex-shrink: 0;
       max-width: 300px;
       margin: auto;
@@ -89,7 +113,7 @@ body {
 
       .tab__label {
         font-size: 12px;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 16px;
         letter-spacing: 0.84px;
         text-transform: uppercase;
@@ -115,11 +139,12 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      // align-items: flex-end;
       gap: 22px;
       flex-shrink: 0;
       list-style-type: none;
       text-transform: capitalize;
+      font-weight: 500;
+      font-size: 14px;
 
       .donut__list__item {
         display: flex;
@@ -142,52 +167,64 @@ body {
   }
 }
 // ================== home page style end ==================
-@media screen and (max-width: $xs) {
+
+@media screen and (min-width: $sm) {
   .section__container {
-    max-width: 400px;
-    .title {
-      font-size: 36px;
-    }
-
-    .chart__container {
-      padding: 28px;
-
-      .tab__and__chart {
-        gap: 30px;
-      }
-    }
+    max-width: 450px;
   }
 }
 
-@media screen and (min-width: 412px) and (max-width: $sm) {
-  .section__container {
-    max-width: 420px;
-    .title {
-      font-size: 36px;
-    }
-
-    .chart__container {
-      padding: 28px;
-
-      .tab__and__chart {
-        gap: 30px;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 541px) and (max-width: $md) {
+@media screen and (min-width: $md) {
   .section__container {
     max-width: 500px;
+    padding: 30px 0;
     .title {
-      font-size: 36px;
+      font-size: 38px;
     }
 
     .chart__container {
-      padding: 28px;
+      padding: 30px;
 
       .tab__and__chart {
-        gap: 30px;
+        gap: 36px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .section__container {
+    max-width: 520px;
+    .title {
+      font-size: 38px;
+    }
+
+    .chart__container {
+      padding: 30px;
+
+      .tab__and__chart {
+        gap: 36px;
+      }
+
+      .donut__list {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .section__container {
+    max-width: 560px;
+    .title {
+      font-size: 42px;
+    }
+
+    .chart__container {
+      padding: 32px;
+
+      .tab__and__chart {
+        gap: 42px;
       }
     }
   }
