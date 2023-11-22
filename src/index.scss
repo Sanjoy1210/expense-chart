@@ -23,13 +23,13 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 400;
+  background-color: $primary-color;
 }
 
 // ================== home page style start ==================
 .section__container {
   max-width: 560px;
   margin: auto;
-  background-color: $primary-color;
 
   .title {
     color: #fff;
@@ -46,16 +46,21 @@ body {
     background-color: #fff;
     padding: 32px 0;
     border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 42px;
-    flex-shrink: 0;
 
     .chart__title {
       font-size: 24px;
       color: $black;
       font-weight: 700;
+    }
+
+    .tab__and__chart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 42px;
+      flex-shrink: 0;
+      max-width: 300px;
+      margin: auto;
     }
 
     .tabs {
@@ -89,6 +94,53 @@ body {
         color: $blue;
       }
     }
+
+    .donut__list {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 22px;
+      flex-shrink: 0;
+      list-style-type: none;
+      text-transform: capitalize;
+
+      .donut__list__item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+
+    // .doughnut-chart-container {
+    //   position: relative;
+    // }
+
+    // .legend {
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    //   background-color: $white;
+    //   padding: 10px;
+    //   border-radius: 50%;
+    //   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    //   .legend-item {
+    //     display: flex;
+    //     align-items: center;
+    //     margin-bottom: 5px;
+
+    //     .legend-color {
+    //       width: 15px;
+    //       height: 15px;
+    //       margin-right: 5px;
+    //       border-radius: 50%;
+    //     }
+    //   }
+    // }
   }
 }
 // ================== home page style end ==================
