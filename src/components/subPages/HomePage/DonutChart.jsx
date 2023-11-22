@@ -38,7 +38,7 @@ export default function DonutChart({ data }) {
 
   return (
     <div className="donut__chart">
-      <svg width="325px" height="325px" viewBox="0 0 100 100">
+      <svg width="325px" height="325px" viewBox="10 10 80 80">
         <text x={cx} y={cy} textAnchor="middle" dominantBaseline="middle">
           <tspan dy={2} className="total__value">
             $ {numberWithCommas(sum)}
