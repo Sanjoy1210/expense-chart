@@ -57,10 +57,14 @@ body {
   font-family: "HelveticaNeue", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  background-color: $primary-color;
+  // background-color: $primary-color;
 }
 
 // ================== home page style start ==================
+.home__page {
+  background-color: $primary-color;
+}
+
 .section__container {
   height: 100%;
   display: flex;
@@ -168,6 +172,46 @@ body {
 }
 // ================== home page style end ==================
 
+// ================== Not found Page ==================
+.notfound__container {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .error {
+    font-size: 150px;
+    color: $light-blue;
+    text-shadow: 1px 1px 1px $dark-blue, 2px 2px 1px $dark-blue,
+      3px 3px 1px $dark-blue, 4px 4px 1px $dark-blue, 5px 5px 1px $dark-blue,
+      6px 6px 1px $dark-blue, 7px 7px 1px $dark-blue, 8px 8px 1px $dark-blue,
+      25px 25px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .page {
+    margin: 2rem 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .back__home {
+    display: inline-block;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.75rem 1rem 0.6rem;
+    transition: all 0.2s linear;
+  }
+
+  .back__home:hover {
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+// ================== Media Query ==================
 @media screen and (min-width: $sm) {
   .section__container {
     max-width: 450px;

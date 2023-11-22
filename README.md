@@ -1,8 +1,60 @@
-# React + Vite
+# Requirement
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Here, you'll have to convert a provided design to an interactive html project. You can use any frontend frameworks or tools required to achieve the desired result.
 
-Currently, two official plugins are available:
+## Instruction:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Make sure your project look like the provided design.
+- You may use any web framework of your choice.
+- Your are allowed to use any CSS preprocessor.
+- You are not allowed to use any external library for generating the chart.
+
+### Do:
+
+- Convert the provided design to a web app with as much accuracy as possible.
+- Make sure it's responsive, you can decide the responsive layout / element alignments.
+- Try not to miss out even the smallest details.
+
+## Run the project in locally
+
+Clone this repository -
+
+```sh
+git clone https://github.com/Sanjoy1210/expense-chart.git
+```
+
+Go to the cloned project directory
+
+```sh
+cd expense-chart
+```
+
+install the dependencies
+
+```sh
+npm i
+```
+
+or
+
+```sh
+yarn
+```
+
+start the development server
+
+```sh
+npm run dev
+```
+
+or
+
+```sh
+yarn dev
+```
+
+Your app should be available in http://localhost:5173/
+
+## Project live preview
+
+- [expense chart app]()
