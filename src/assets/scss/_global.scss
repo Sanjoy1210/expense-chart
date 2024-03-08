@@ -124,45 +124,6 @@ body {
 }
 // ================== home page style end ==================
 
-// ================== Not found Page ==================
-.notfound-container {
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .error {
-    font-size: 150px;
-    color: $light-blue;
-    text-shadow: 1px 1px 1px $dark-blue, 2px 2px 1px $dark-blue,
-      3px 3px 1px $dark-blue, 4px 4px 1px $dark-blue, 5px 5px 1px $dark-blue,
-      6px 6px 1px $dark-blue, 7px 7px 1px $dark-blue, 8px 8px 1px $dark-blue,
-      25px 25px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .page {
-    margin: 2rem 0;
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .back-home {
-    display: inline-block;
-    border: 2px solid $primary-color;
-    border-radius: 10px;
-    text-transform: uppercase;
-    font-weight: 500;
-    padding: 0.75rem 1rem 0.6rem;
-    transition: all 0.2s linear;
-  }
-
-  .back-home:hover {
-    background: $primary-color;
-    color: $white;
-  }
-}
-
 // ================== Media Query ==================
 @include media-queries('desktop') {
   .container {
