@@ -10,11 +10,11 @@ export default function App() {
     setSelectedPeriod(expense);
   };
   return (
-    <section className="section__container">
+    <section className="section-container">
       <h1 className="title">Expense Chart</h1>
-      <div className="chart__container">
-        <div className="tab__and__chart">
-          <h3 className="chart__title">Expenses</h3>
+      <div className="chart-container">
+        <div className="tab-and-chart">
+          <h3 className="chart-title">Expenses</h3>
           <div>
             {/* tabs */}
             <Tabs
@@ -29,13 +29,13 @@ export default function App() {
         </div>
 
         {/* donut items */}
-        <ul className="donut__list">
+        <ul className="donut-list">
           {Object.keys(selectedPeriod)
             .slice(1)
             .map((item, index) => (
-              <li key={index} className="donut__list__item">
+              <li key={index} className="donut-list-item">
                 <span
-                  className="donut__list__item__color"
+                  className="donut-list-item-color"
                   style={{
                     backgroundColor: colorCodes[item],
                     width: "37px",

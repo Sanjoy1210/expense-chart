@@ -61,11 +61,11 @@ body {
 }
 
 // ================== home page style start ==================
-.home__page {
+.home-page {
   background-color: $primary-color;
 }
 
-.section__container {
+.section-container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -85,19 +85,19 @@ body {
     padding-bottom: 34px;
   }
 
-  .chart__container {
+  .chart-container {
     width: 100%;
     background-color: $white;
     padding: 28px; // 32px
     border-radius: 40px;
 
-    .chart__title {
+    .chart-title {
       font-size: 24px;
       color: $black;
       font-weight: 700;
     }
 
-    .tab__and__chart {
+    .tab-and-chart {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -115,7 +115,7 @@ body {
       border-radius: 30px;
       background-color: $light-gray;
 
-      .tab__label {
+      .tab-label {
         font-size: 12px;
         font-weight: 500;
         line-height: 16px;
@@ -133,13 +133,13 @@ body {
         }
       }
 
-      .active__tab__label {
+      .active-tab-label {
         background-color: $white;
         color: $blue;
       }
     }
 
-    .donut__list {
+    .donut-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -150,21 +150,21 @@ body {
       font-weight: 500;
       font-size: 14px;
 
-      .donut__list__item {
+      .donut-list-item {
         display: flex;
         gap: 10px;
         align-items: center;
       }
     }
 
-    .donut__chart {
+    .donut-chart {
       text {
         font-weight: 700;
       }
-      .total__value {
+      .total-value {
         font-size: 10px;
       }
-      .decimal__value {
+      .decimal-value {
         font-size: 5px;
       }
     }
@@ -173,7 +173,7 @@ body {
 // ================== home page style end ==================
 
 // ================== Not found Page ==================
-.notfound__container {
+.notfound-container {
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
@@ -195,7 +195,7 @@ body {
     font-weight: 500;
   }
 
-  .back__home {
+  .back-home {
     display: inline-block;
     border: 2px solid $primary-color;
     border-radius: 10px;
@@ -205,7 +205,7 @@ body {
     transition: all 0.2s linear;
   }
 
-  .back__home:hover {
+  .back-home:hover {
     background: $primary-color;
     color: $white;
   }
@@ -213,23 +213,23 @@ body {
 
 // ================== Media Query ==================
 @media screen and (min-width: $sm) {
-  .section__container {
+  .section-container {
     max-width: 450px;
   }
 }
 
 @media screen and (min-width: $md) {
-  .section__container {
+  .section-container {
     max-width: 500px;
     padding: 30px 0;
     .title {
       font-size: 38px;
     }
 
-    .chart__container {
+    .chart-container {
       padding: 30px;
 
-      .tab__and__chart {
+      .tab-and-chart {
         gap: 36px;
       }
     }
@@ -237,20 +237,20 @@ body {
 }
 
 @media screen and (min-width: $lg) {
-  .section__container {
+  .section-container {
     max-width: 520px;
     .title {
       font-size: 38px;
     }
 
-    .chart__container {
+    .chart-container {
       padding: 30px;
 
-      .tab__and__chart {
+      .tab-and-chart {
         gap: 36px;
       }
 
-      .donut__list {
+      .donut-list {
         font-size: 16px;
       }
     }
@@ -258,16 +258,16 @@ body {
 }
 
 @media screen and (min-width: $xl) {
-  .section__container {
+  .section-container {
     max-width: 560px;
     .title {
       font-size: 42px;
     }
 
-    .chart__container {
+    .chart-container {
       padding: 32px;
 
-      .tab__and__chart {
+      .tab-and-chart {
         gap: 42px;
       }
     }

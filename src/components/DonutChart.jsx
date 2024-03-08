@@ -37,13 +37,13 @@ export default function DonutChart({ data }) {
   }
 
   return (
-    <div className="donut__chart">
+    <div className="donut-chart">
       <svg width="325px" height="325px" viewBox="10 10 80 80">
         <text x={cx} y={cy} textAnchor="middle" dominantBaseline="middle">
-          <tspan dy={2} className="total__value">
+          <tspan dy={2} className="total-value">
             $ {numberWithCommas(sum)}
           </tspan>
-          <tspan dy={1} fill="#9d9bf4" className="decimal__value">
+          <tspan dy={1} fill="#9d9bf4" className="decimal-value">
             .00
           </tspan>
         </text>

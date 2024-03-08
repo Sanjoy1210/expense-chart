@@ -4,8 +4,8 @@ export default function Tabs({ tabs, selectedPeriod, handleClick }) {
       {tabs?.map((tab) => (
         <li
           key={tab?.period}
-          className={`tab__label ${
-            tab?.period === selectedPeriod?.period ? "active__tab__label" : ""
+          className={`tab-label ${
+            tab?.period === selectedPeriod?.period ? "active-tab-label" : ""
           }`}
           onClick={() => handleClick(tab)}
         >
