@@ -10,15 +10,15 @@ export default function DonutChart({ data }) {
 
   let filled = 0;
 
-  const sum = Object.values(data)
-    .slice(1)
-    .reduce((acc, value) => acc + value, 0);
+  const sum = Object.keys(data)
+    .filter(key => key !== 'period')
+    .reduce((acc, curr) => acc + data[curr], 0);
   const totalInt = parseInt(sum).toLocaleString();
   const decimal = (sum - parseInt(sum)).toFixed(2).split('.')[1];
   const ratio = 100 / sum;
 
   const formattedData = Object.keys(data)
-    .slice(1)
+    .filter(key => key !== 'period')
     .map((key) => ({
       name: key,
       value: data[key],
