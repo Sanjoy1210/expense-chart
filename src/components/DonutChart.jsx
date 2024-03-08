@@ -13,6 +13,8 @@ export default function DonutChart({ data }) {
   const sum = Object.values(data)
     .slice(1)
     .reduce((acc, value) => acc + value, 0);
+  const totalInt = parseInt(sum).toLocaleString();
+  const decimal = (sum - parseInt(sum)).toFixed(2).split('.')[1];
   const ratio = 100 / sum;
 
   const formattedData = Object.keys(data)
@@ -32,19 +34,15 @@ export default function DonutChart({ data }) {
     filled += itemRatio;
   });
 
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
   return (
     <div className="donut-chart">
       <svg width="325px" height="325px" viewBox="10 10 80 80">
         <text x={cx} y={cy} textAnchor="middle" dominantBaseline="middle">
           <tspan dy={2} className="total-value">
-            $ {numberWithCommas(sum)}
+            $ {totalInt}
           </tspan>
           <tspan dy={1} fill="#9d9bf4" className="decimal-value">
-            .00
+            .{decimal}
           </tspan>
         </text>
         {formattedData.map((item, index) => (
