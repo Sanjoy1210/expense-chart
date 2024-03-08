@@ -1,0 +1,224 @@
+@import 'web-fonts';
+@import 'mixins';
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "helvetica_neueregular", sans-serif;
+  font-size: 16px;
+  background-color: $primary-color;
+}
+
+// ================== home page style start ==================
+.section__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 560px;
+  padding: 30px 10px;
+
+  .title {
+    color: #fff;
+    text-align: center;
+    font-size: 36px; // 42px
+    // font-style: normal;
+    font-family: "helvetica_neuebold", sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 34px;
+  }
+
+  .chart__container {
+    width: 100%;
+    background-color: $white;
+    padding: 28px; // 32px
+    border-radius: 40px;
+
+    .chart__title {
+      font-size: 24px;
+      color: $black;
+      font-weight: 700;
+    }
+
+    .tab__and__chart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px; // 42px
+      flex-shrink: 0;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    .tabs {
+      display: flex;
+      padding: 12px 32px;
+      align-items: center;
+      gap: 21px;
+      border-radius: 30px;
+      background-color: $light-gray;
+
+      .tab__label {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.84px;
+        text-transform: uppercase;
+        color: $dark-gray;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 16px;
+
+        &:hover {
+          background-color: $white;
+        }
+      }
+
+      .active__tab__label {
+        background-color: $white;
+        color: $blue;
+      }
+    }
+
+    .donut__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+      flex-shrink: 0;
+      list-style-type: none;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 14px;
+
+      .donut__list__item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+
+    .donut__chart {
+      text {
+        font-weight: 700;
+      }
+      .total__value {
+        font-size: 10px;
+      }
+      .decimal__value {
+        font-size: 5px;
+      }
+    }
+  }
+}
+// ================== home page style end ==================
+
+// ================== Not found Page ==================
+.notfound__container {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .error {
+    font-size: 150px;
+    color: $light-blue;
+    text-shadow: 1px 1px 1px $dark-blue, 2px 2px 1px $dark-blue,
+      3px 3px 1px $dark-blue, 4px 4px 1px $dark-blue, 5px 5px 1px $dark-blue,
+      6px 6px 1px $dark-blue, 7px 7px 1px $dark-blue, 8px 8px 1px $dark-blue,
+      25px 25px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .page {
+    margin: 2rem 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .back__home {
+    display: inline-block;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.75rem 1rem 0.6rem;
+    transition: all 0.2s linear;
+  }
+
+  .back__home:hover {
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+// ================== Media Query ==================
+@include media-queries('desktop') {
+  .section__container {
+    max-width: 560px;
+    .title {
+      font-size: 42px;
+    }
+
+    .chart__container {
+      padding: 32px;
+
+      .tab__and__chart {
+        gap: 42px;
+      }
+    }
+  }
+}
+@include media-queries('desktop-sm') {
+  .section__container {
+    max-width: 520px;
+    .title {
+      font-size: 38px;
+    }
+
+    .chart__container {
+      padding: 30px;
+
+      .tab__and__chart {
+        gap: 36px;
+      }
+
+      .donut__list {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@include media-queries('tab-sm') {
+  .section__container {
+    max-width: 500px;
+    padding: 30px 0;
+    .title {
+      font-size: 38px;
+    }
+
+    .chart__container {
+      padding: 30px;
+
+      .tab__and__chart {
+        gap: 36px;
+      }
+    }
+  }
+}
+@include media-queries('mobile') {
+  .section__container {
+    max-width: 450px;
+  }
+}

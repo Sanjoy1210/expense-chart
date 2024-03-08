@@ -1,0 +1,20 @@
+$breakpoints: (
+  'mobile-sm': 360px,
+  'mobile': 575px,
+  'tab-sm': 767px,
+  'tab': 991px,
+  'desktop-sm': 1024px,
+  'desktop': 1199px
+);
+
+@mixin media-queries($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == min {
+      $width: $width + 1px;
+    }
+  }
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
