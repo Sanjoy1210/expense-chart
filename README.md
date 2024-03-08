@@ -15,12 +15,18 @@ Here, you'll have to convert a provided design to an interactive html project. Y
 - Make sure it's responsive, you can decide the responsive layout / element alignments.
 - Try not to miss out even the smallest details.
 
+### Do not:
+
+- Give up on this because you think it's not perfect.
+- Add everything in the git with a single commit.
+- Hesitate to reach out to us if there is any confusion.
+
 ## Run the project in locally
 
 Clone this repository -
 
 ```sh
-git clone https://github.com/Sanjoy1210/expense-chart.git
+git clone https://github.com/sanjoypaul-git/expense-chart.git
 ```
 
 Go to the cloned project directory
@@ -32,25 +38,13 @@ cd expense-chart
 install the dependencies
 
 ```sh
-npm i
-```
-
-or
-
-```sh
-yarn
+npm install
 ```
 
 start the development server
 
 ```sh
 npm run dev
-```
-
-or
-
-```sh
-yarn dev
 ```
 
 Your app should be available in http://localhost:5173/
