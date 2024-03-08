@@ -2,7 +2,7 @@ import DonutChart from "@components/DonutChart";
 import Tabs from "@components/Tabs";
 import { useState } from "react";
 import expenseData from "@utils/expense-data.json";
-import { colorCodes } from "@utils/colorCodes";
+import Legend from "@components/Legend";
 
 export default function App() {
   const [selectedPeriod, setSelectedPeriod] = useState(expenseData?.[0]);
@@ -15,39 +15,18 @@ export default function App() {
       <div className="chart-container">
         <div className="tab-and-chart">
           <h3 className="chart-title">Expenses</h3>
-          <div>
-            {/* tabs */}
-            <Tabs
-              tabs={expenseData}
-              selectedPeriod={selectedPeriod}
-              handleClick={handleClick}
-            />
+          {/* tabs */}
+          <Tabs
+            selectedPeriod={selectedPeriod}
+            handleClick={handleClick}
+          />
 
-            {/* doughnut chart */}
-            <DonutChart data={selectedPeriod} />
-          </div>
+          {/* doughnut chart */}
+          <DonutChart data={selectedPeriod} />
         </div>
 
-        {/* donut items */}
-        <ul className="donut-list">
-          {Object.keys(selectedPeriod)
-            .slice(1)
-            .map((item, index) => (
-              <li key={index} className="donut-list-item">
-                <span
-                  className="donut-list-item-color"
-                  style={{
-                    backgroundColor: colorCodes[item],
-                    width: "37px",
-                    height: "13px",
-                    display: "inline-block",
-                    borderRadius: "33px",
-                  }}
-                ></span>
-                {item}
-              </li>
-            ))}
-        </ul>
+        {/* legend */}
+        <Legend />
       </div>
     </div>
   );
