@@ -10,7 +10,7 @@ export default function App() {
     setSelectedPeriod(expense);
   };
   return (
-    <section className="section-container">
+    <div className="container">
       <h1 className="title">Expense Chart</h1>
       <div className="chart-container">
         <div className="tab-and-chart">
@@ -49,6 +49,6 @@ export default function App() {
             ))}
         </ul>
       </div>
-    </section>
+    </div>
   );
 }

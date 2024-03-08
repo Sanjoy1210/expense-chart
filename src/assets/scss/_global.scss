@@ -16,7 +16,7 @@ body {
 }
 
 // ================== home page style start ==================
-.section-container {
+.container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -165,7 +165,7 @@ body {
 
 // ================== Media Query ==================
 @include media-queries('desktop') {
-  .section-container {
+  .container {
     max-width: 560px;
     .title {
       font-size: 42px;
@@ -181,7 +181,7 @@ body {
   }
 }
 @include media-queries('desktop-sm') {
-  .section-container {
+  .container {
     max-width: 520px;
     .title {
       font-size: 38px;
@@ -201,7 +201,7 @@ body {
   }
 }
 @include media-queries('tab-sm') {
-  .section-container {
+  .container {
     max-width: 500px;
     padding: 30px 0;
     .title {
@@ -218,7 +218,7 @@ body {
   }
 }
 @include media-queries('mobile') {
-  .section-container {
+  .container {
     max-width: 450px;
   }
 }
