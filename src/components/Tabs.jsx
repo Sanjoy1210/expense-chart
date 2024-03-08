@@ -1,7 +1,9 @@
-export default function Tabs({ tabs, selectedPeriod, handleClick }) {
+import expenseData from "@utils/expense-data.json";
+
+export default function Tabs({ selectedPeriod, handleClick }) {
   return (
     <ul className="tabs">
-      {tabs?.map((tab) => (
+      {expenseData?.map((tab) => (
         <li
           key={tab?.period}
           className={`tab-label ${
